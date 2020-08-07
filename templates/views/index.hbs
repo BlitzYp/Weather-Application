@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Page</title>
+    <link rel='stylesheet' href='/css/style.css'>
+    <link rel="icon" href="/img/weather.png">
+</head>
+
+<body>
+    <div class="content-main">
+        {{>header}}
+        <p> This application is made by {{name}}</p>
+        {{!-- <form>
+            <input placeholder="Address">
+            <button>search</button>
+        </form> --}}
+        <form action="" class="search-bar">
+            <input type="search" placeholder="Address" name="search" pattern=".*\S.*">
+            <button class="search-btn" type="submit">
+                <span>Search</span>
+            </button>
+        </form>
+        <h1 id="result"></h1>
+        <p id="info"></p>
+    </div>
+    {{>footer}}
+    <script src='/JS/app.js'></script>
+</body>
+
+</html>
