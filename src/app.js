@@ -9,7 +9,7 @@ const geocode = require("./utils/gcode");
 const app = express();
 const temp = path.join(__dirname, "../templates/views");
 const partials = path.join(__dirname, '../templates/partials');
-
+const port = process.env.PORT || 3000;
 // App configs
 app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'hbs');
@@ -99,4 +99,4 @@ app.get('*', (req, res) => {
     res.render('error', error);
 })
 
-app.listen(3000, console.log("Server running on port 3000"))
+app.listen(port, console.log(`Server running on port ${port}`))

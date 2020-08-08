@@ -1,7 +1,7 @@
 console.log("This is client side JS");
 
 const getWeather = async (address) => {
-    const res = await fetch(`http://localhost:3000/weather?address=${address}`)
+    const res = await fetch(`/weather?address=${address}`)
     const data = await res.json()
     return data
 }
@@ -23,6 +23,6 @@ input.addEventListener("submit", async (i) => {
     }
     else {
         result.textContent = res.location;
-        info.textContent = res.forecast; 
+        info.textContent = res.forecast;
     }
 });
