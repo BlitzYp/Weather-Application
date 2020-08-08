@@ -10,7 +10,8 @@ const weather = (lon, lat, callback) => {
             const real = res.body.current.temperature;
             const feels = res.body.current.feelslike;
             const desc = res.body.current.weather_descriptions[0];
-            callback(undefined, `It is currently ${real} Celsius! Although is feels like it is ${feels} Celsius. It is ${desc}`);
+            const windSpeed = res.body.current.wind_speed;
+            callback(undefined, `It is currently ${real} Celsius! Although is feels like it is ${feels} Celsius. ${desc}. The wind speed is ${windSpeed}`);
         }
         catch {
             callback('Unable to connect the weather servers', undefined)
