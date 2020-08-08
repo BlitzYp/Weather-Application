@@ -4,7 +4,6 @@ const path = require('path');
 const hbs = require('hbs');
 const weather = require("./utils/weather");
 const geocode = require("./utils/gcode");
-
 //Project variables
 const app = express();
 const temp = path.join(__dirname, "../templates/views");
